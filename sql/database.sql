@@ -1,11 +1,6 @@
-CREATE DATABASE node_mysql_ts;
-
-CREATE TABLE posts(
-    id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    title VARCHAR(200) NOT NULL,
-    description TEXT NOT NULL,
-    image_url TEXT,
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+CREATE TABLE MUTATION_REQUESTS (
+    id       INTEGER      NOT NULL
+                          PRIMARY KEY AUTOINCREMENT,
+    dna      VARCHAR (60) NOT NULL,
+    mutation VARCHAR (10) NOT NULL
 );
-
-DESCRIBE posts;

@@ -5,7 +5,7 @@ let urlDatabase: string = "";
 
 export async function connect(){
     
-    const connection = new sqlite3.Database("tempDB",
+    const connection = new sqlite3.Database("DATABASE_MUTATION.sqlite3",
         error => {
             if (error) {
                 console.log('Could not connect to database', error)
