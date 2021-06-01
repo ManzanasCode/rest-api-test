@@ -23,6 +23,7 @@ exports.FirebaseClass = void 0;
 const firebaseAdmin = __importStar(require("firebase-admin"));
 class FirebaseClass {
     constructor() {
+        console.log("Firebase Project: ", project2.databaseURL);
         firebaseAdmin.initializeApp(project2);
     }
     getInstance() {

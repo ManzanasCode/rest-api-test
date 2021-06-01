@@ -56,12 +56,18 @@ class JobSchedule {
     }
     static consultaDatosJob(instanceNumber, fbInstance) {
         return __awaiter(this, void 0, void 0, function* () {
-            console.log("Instance No: " + instanceNumber);
+            console.log("Proceso No: " + instanceNumber);
             var job = new cron_1.CronJob('*/5 * * * * *', function () {
                 return __awaiter(this, void 0, void 0, function* () {
                     //console.log("Job execute: ", new Date().getTime() )
                     let randomEmployee = yield randon_data_1.RandomData.randomNumber(1, 500);
                     let stringEmployee = "1500" + randomEmployee.toString();
+                    let ticketData = yield randon_data_1.RandomData.generaTickets();
+                    ticketData.solucion.value = "cambios desde el job";
+                    let arrayTickets = [];
+                    arrayTickets.push(ticketData);
+                    arrayTickets.push(ticketData);
+                    var db = fbInstance.database().ref("empleados/" + stringEmployee).set({ empleado: "15008562", ticket: arrayTickets });
                     console.log("stringEmployee: ", stringEmployee);
                     var db2 = yield (yield fbInstance.database().ref("/empleados/" + stringEmployee).once("value")).val();
                     console.log("Firebase query: ", db2.ticket.length);

@@ -4,6 +4,7 @@ import { firebaseConfig } from './config'
 export class FirebaseClass {
 
     constructor(){
+        console.log("Firebase Project: ", project2.databaseURL)
         firebaseAdmin.initializeApp(project2)
     }
 

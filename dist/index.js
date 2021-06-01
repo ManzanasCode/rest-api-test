@@ -19,10 +19,6 @@ function main() {
         const fbClass = new firebase_controller_1.FirebaseClass();
         let fbInstance = fbClass.getInstance();
         job_test_1.JobSchedule.consultaDatosJob("Uno", fbInstance);
-        job_test_1.JobSchedule.consultaDatosJob("Dos", fbInstance);
-        job_test_1.JobSchedule.consultaDatosJob("Tres", fbInstance);
-        job_test_1.JobSchedule.consultaDatosJob("Cuatro", fbInstance);
-        job_test_1.JobSchedule.consultaDatosJob("Cinco", fbInstance);
     });
 }
 main();

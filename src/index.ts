@@ -8,13 +8,9 @@ async function main(){
     await app.listen()
 
     const fbClass = new FirebaseClass();
-        let fbInstance = fbClass.getInstance()
+    let fbInstance = fbClass.getInstance()
 
     JobSchedule.consultaDatosJob("Uno", fbInstance)
-    JobSchedule.consultaDatosJob("Dos", fbInstance)
-    JobSchedule.consultaDatosJob("Tres", fbInstance)
-    JobSchedule.consultaDatosJob("Cuatro", fbInstance)
-    JobSchedule.consultaDatosJob("Cinco", fbInstance)
 
     
 }
