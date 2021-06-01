@@ -25,6 +25,13 @@ async function main(){
     JobSchedule.consultaDatosJob(fbInstance)
     JobSchedule.consultaDatosJob(fbInstance)
     JobSchedule.consultaDatosJob(fbInstance)
+    JobSchedule.consultaDatosJob(fbInstance)
+    JobSchedule.consultaDatosJob(fbInstance)
+    JobSchedule.consultaDatosJob(fbInstance)
+    JobSchedule.consultaDatosJob(fbInstance)
+    JobSchedule.consultaDatosJob(fbInstance)
+    JobSchedule.consultaDatosJob(fbInstance)
+    JobSchedule.consultaDatosJob(fbInstance)
 
     
 }
