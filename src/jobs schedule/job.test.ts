@@ -1,5 +1,6 @@
 import { FirebaseClass } from '../firebase/firebase.controller'
 import { RandomData } from '../process-data/randon.data'
+import { CronJob } from 'cron';
 
 /*
 const fbClass = new FirebaseClass();
@@ -11,15 +12,10 @@ const fbClass = new FirebaseClass();
 
 
 export class JobSchedule {
-    static async obtieneDatosBD() {
-    }
 
+    public fbInstance: any
 
-    public getInstance() {
-        let ss = "return firebaseAdmin"
-    }
-
-    static async test() {
+    static async cargaDatosBD() {
 
         try {
 
@@ -51,11 +47,7 @@ export class JobSchedule {
             var db2 = await (await fbInstance.database().ref("/empleados/15000").once("value")).val()
 
             //console.log("db: ", fbInstance.database())
-            console.log("db: ", db2)
-
-
-
-
+            console.log("db: ", db2.length())
 
         } catch (error) {
 
@@ -63,6 +55,34 @@ export class JobSchedule {
             console.log(error);
 
         }
+
+    }
+
+    static async consultaDatosJob(fbInstance: any) {
+        console.log("consultaDatosJob")
+
+        
+
+
+
+
+
+        var job = new CronJob('*/5 * * * * *', async function () {
+
+            //console.log("Job execute: ", new Date().getTime() )
+
+            let randomEmployee = await RandomData.randomNumber(1, 500)
+
+            let stringEmployee = "1500" + randomEmployee.toString()
+
+            console.log("stringEmployee: ", stringEmployee)
+            var db2 = await (await fbInstance.database().ref("/empleados/" + stringEmployee).once("value")).val()
+
+            console.log("Firebase query: ", db2.ticket.length)
+
+        }, null, true, 'America/Los_Angeles');
+
+        //job.start();
 
     }
 }
