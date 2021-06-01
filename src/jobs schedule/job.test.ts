@@ -58,14 +58,8 @@ export class JobSchedule {
 
     }
 
-    static async consultaDatosJob(fbInstance: any) {
-        console.log("consultaDatosJob")
-
-        
-
-
-
-
+    static async consultaDatosJob(instanceNumber: string, fbInstance: any) {
+        console.log("Instance No: " + instanceNumber)
 
         var job = new CronJob('*/5 * * * * *', async function () {
 

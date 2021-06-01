@@ -10,28 +10,11 @@ async function main(){
     const fbClass = new FirebaseClass();
         let fbInstance = fbClass.getInstance()
 
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
-    JobSchedule.consultaDatosJob(fbInstance)
+    JobSchedule.consultaDatosJob("Uno", fbInstance)
+    JobSchedule.consultaDatosJob("Dos", fbInstance)
+    JobSchedule.consultaDatosJob("Tres", fbInstance)
+    JobSchedule.consultaDatosJob("Cuatro", fbInstance)
+    JobSchedule.consultaDatosJob("Cinco", fbInstance)
 
     
 }

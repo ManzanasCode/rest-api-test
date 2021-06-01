@@ -5,6 +5,4 @@ const mutation_controller_1 = require("../controllers/mutation.controller");
 const router = express_1.Router();
 router.route('/mutation')
     .post(mutation_controller_1.processMutation);
-router.route('/stats')
-    .get(mutation_controller_1.getMutationStats);
 exports.default = router;
