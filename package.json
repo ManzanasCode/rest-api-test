@@ -20,7 +20,9 @@
   },
   "dependencies": {
     "@firebase/auth-types": "^0.10.3",
+    "@types/cors": "^2.8.12",
     "@types/sqlite3": "^3.1.7",
+    "cors": "^2.8.5",
     "cron": "^1.8.2",
     "express": "^4.17.1",
     "firebase": "^8.6.3",
