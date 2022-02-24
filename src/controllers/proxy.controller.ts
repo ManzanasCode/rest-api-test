@@ -9,7 +9,7 @@ export async function getCredentials(req: Request, res: Response): Promise<Respo
     res.header('content-type: application/json; charset=utf-8')
     res.header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
     res.header("Allow", "GET, POST, OPTIONS, PUT, DELETE");
-    //res.header("Cache-Control", 'private, no-cache, no-store, must-revalidate');
+
     const jsonResponse =
     {
         "status": "C",
@@ -132,7 +132,43 @@ export async function getIpRfc(req: Request, res: Response): Promise<Response | 
         "status": "C",
         "code": "200",
         "response": "El servicio se ejecutó correctamente",
-        "ipList": null
+        "ipList": [
+          {
+            "anillo": null,
+            "ip": "10.253.156.38",
+            "equipo": null
+          },
+          {
+            "anillo": null,
+            "ip": "10.253.156.81",
+            "equipo": null
+          },
+          {
+            "anillo": null,
+            "ip": "10.253.56.46",
+            "equipo": null
+          },
+          {
+            "anillo": null,
+            "ip": "10.253.188.215",
+            "equipo": null
+          },
+          {
+            "anillo": null,
+            "ip": "10.253.165.99",
+            "equipo": null
+          },
+          {
+            "anillo": null,
+            "ip": "10.253.157.72",
+            "equipo": null
+          },
+          {
+            "anillo": null,
+            "ip": "187.190.3.25",
+            "equipo": null
+          }
+        ]
       }
 
     res.json(jsonResponse);

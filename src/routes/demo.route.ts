@@ -12,7 +12,7 @@ router.route('/rings-api/rings/getPerformance').get(getPerformance);
 
 router.route('/rings-api/rings/token').get(token);
 
-router.route('/rings-api/rings/getCredentials').post(getCredentials);
+router.route('/rings-api/rings/getCredentials').get(getCredentials);
 
 router.route('/rings-api/admin/userLog').get(userLog);
 
