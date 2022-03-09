@@ -92,7 +92,7 @@ export async function consultarRFC(req: Request, res: Response): Promise<Respons
 
 export async function evidences(req: Request, res: Response): Promise<Response | void> {
 
-    await sleep(2000)
+    await sleep(3000)
 
     const jsonResponse =
     {
@@ -186,6 +186,14 @@ export async function ejecutaProtocolos(req: Request, res: Response): Promise<Re
     res.end()
 }
 
+export async function validacionacceso(req: Request, res: Response): Promise<Response | void> {
+  const jsonResponse = true
+  res.json(jsonResponse);
+  res.status(200)
+  res.end()
+}
+
+
 
 export async function getPerformance(req: Request, res: Response): Promise<Response | void> {
 
@@ -240,6 +248,7 @@ export async function validacionLLDP(req: Request, res: Response): Promise<Respo
 export async function validateVRRP(req: Request, res: Response): Promise<Response | void> {
 
     await sleep(3000)
+
     console.log("validateVRRP: ", req.body)
     res.json({
         "respuestaBoolean": true,

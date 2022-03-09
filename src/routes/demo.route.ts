@@ -3,7 +3,7 @@ import { login } from '../controllers/login.controller'
 import { getCredentials, userLog, consultarRFC, evidences, changestatus,
     getIpRfc, ejecutaProtocolos,
     token, getPerformance, datosOSPFv2, validacionLLDP, validateVRRP, validacionInterfaces,
-    down, UP2COMMIT, DOWN2COMMIT, up
+    down, UP2COMMIT, DOWN2COMMIT, up, validacionacceso
 } from '../controllers/proxy.controller'
 
 const router = Router();
@@ -24,6 +24,7 @@ router.route('/rings-api/rings/changestatus').get(changestatus);
 
 router.route('/rings-api/rings/getIpRfc').get(getIpRfc);
 
+router.route('/pdrservice/proxyStep/validacionacceso').post(validacionacceso);
 
 router.route('/pdrservice/proxyStep/datosOSPFv2').post(datosOSPFv2);
 
