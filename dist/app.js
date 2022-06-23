@@ -16,7 +16,9 @@ exports.App = void 0;
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const index_route_1 = __importDefault(require("./routes/index.route"));
-const mutation_route_1 = __importDefault(require("./routes/mutation.route"));
+const login_route_1 = __importDefault(require("./routes/login.route"));
+const demo_route_1 = __importDefault(require("./routes/demo.route"));
+const cors_1 = __importDefault(require("cors"));
 class App {
     constructor(port) {
         this.port = port;
@@ -30,16 +32,19 @@ class App {
     }
     routes() {
         this.app.use(index_route_1.default);
-        this.app.use(mutation_route_1.default);
+        this.app.use(login_route_1.default);
+        this.app.use(demo_route_1.default);
     }
     middelwares() {
         this.app.use(morgan_1.default('dev'));
+        this.app.use(cors_1.default());
         this.app.use(express_1.default.json());
+        this.app.use(express_1.default.urlencoded({ extended: false }));
     }
     listen() {
         return __awaiter(this, void 0, void 0, function* () {
             yield this.app.listen(this.app.get('port'));
-            console.log("server on port: " + this.app.get('port'));
+            console.log(`Server on: http://localhost:${this.app.get('port')}`);
         });
     }
 }

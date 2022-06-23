@@ -10,15 +10,13 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = require("./app");
-const job_test_1 = require("./jobs schedule/job.test");
-const firebase_controller_1 = require("./firebase/firebase.controller");
 function main() {
     return __awaiter(this, void 0, void 0, function* () {
-        const app = new app_1.App(4000);
+        const app = new app_1.App(4005);
         yield app.listen();
-        const fbClass = new firebase_controller_1.FirebaseClass();
-        let fbInstance = fbClass.getInstance();
-        job_test_1.JobSchedule.consultaDatosJob("Uno", fbInstance);
+        //const fbClass = new FirebaseClass();
+        //let fbInstance = fbClass.getInstance()
+        //JobSchedule.consultaDatosJob("Uno", fbInstance)
     });
 }
 main();
