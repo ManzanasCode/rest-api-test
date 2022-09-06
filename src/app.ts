@@ -34,7 +34,7 @@ export class App{
 
     async listen(){
         await this.app.listen(this.app.get('port'))
-        console.log(`Server on: http://localhost:${this.app.get('port')}`)
+        
     }
 
 }
