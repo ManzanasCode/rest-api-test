@@ -1,11 +1,10 @@
 import { Router } from 'express'
-import { login } from '../controllers/login.controller'
+import { test } from '../controllers/books.controller'
 
 const router = Router();
 
-router.route('/rings-api/admin/doLogin').post(login);
+router.route('/rings-api/admin/test').post(test);
 
-router.route('/rings-api/admin/doLogin2').get(login);
 
 
 

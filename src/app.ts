@@ -1,8 +1,7 @@
 import express, {Application} from 'express'
 import morgan from 'morgan'
 import IndexRoute from "./routes/index.route";
-import LoginRoute from "./routes/login.route";
-import DemoRoute from "./routes/demo.route";
+import BookRoute from "./routes/book.route";
 import cors from 'cors'
 
 export class App{
@@ -23,9 +22,7 @@ export class App{
 
     routes(){
         this.app.use(IndexRoute)
-        this.app.use(LoginRoute);
-        this.app.use(DemoRoute);
-
+        this.app.use(BookRoute);
     }
 
     middelwares(){
