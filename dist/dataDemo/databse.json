@@ -1,0 +1,23 @@
+[
+    {
+        "id": "0b615e25-3f46-4a65-8731-11161bb044e3",
+        "name": "El hombre mas rico de babilonia",
+        "author": "George S. Clason",
+        "languaje": "es",
+        "yearPublished": "2022"
+    },
+    {
+        "id": "541c9375-3e4b-4b69-9285-49f2849d477e",
+        "name": "El fin de la ansiedad",
+        "author": "Gio Zarri",
+        "languaje": "es",
+        "yearPublished": "2019"
+    },
+    {
+        "id": "7351ce1d-0bfb-4253-9066-dad4df2c07b5",
+        "name": "Mejorando las charlas",
+        "author": "Patrick King",
+        "languaje": "es",
+        "yearPublished": "2020"
+    }
+]

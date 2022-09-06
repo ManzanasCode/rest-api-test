@@ -7,7 +7,7 @@ router.route('/books/').get(getAllBooks);
 router.route('/books/id/:idbook').get(findById);
 router.route('/books/update').put(update);
 router.route('/books/delete').delete(deleteBook);
-router.route('/books/update').post(insert);
+router.route('/books/insert').post(insert);
 
 
 

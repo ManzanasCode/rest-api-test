@@ -14,9 +14,6 @@ function main() {
     return __awaiter(this, void 0, void 0, function* () {
         const app = new app_1.App(4005);
         yield app.listen();
-        //const fbClass = new FirebaseClass();
-        //let fbInstance = fbClass.getInstance()
-        //JobSchedule.consultaDatosJob("Uno", fbInstance)
     });
 }
 main();

@@ -16,8 +16,7 @@ exports.App = void 0;
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const index_route_1 = __importDefault(require("./routes/index.route"));
-const login_route_1 = __importDefault(require("./routes/login.route"));
-const demo_route_1 = __importDefault(require("./routes/demo.route"));
+const book_route_1 = __importDefault(require("./routes/book.route"));
 const cors_1 = __importDefault(require("cors"));
 class App {
     constructor(port) {
@@ -32,8 +31,7 @@ class App {
     }
     routes() {
         this.app.use(index_route_1.default);
-        this.app.use(login_route_1.default);
-        this.app.use(demo_route_1.default);
+        this.app.use(book_route_1.default);
     }
     middelwares() {
         this.app.use(morgan_1.default('dev'));

@@ -83,28 +83,17 @@ export async function update(req: Request, res: Response): Promise<Response | vo
 export async function deleteBook(req: Request, res: Response): Promise<Response | void> {
     try {
         let responseData: any = ""
-        var reqBook: Book = {
-            id: req.body.id,
-            name: req.body.name,
-            author: req.body.author,
-            languaje: req.body.languaje,
-            yearPublished: req.body.yearPublished,
-        }
-        if (reqBook.id.length == 0 || reqBook.name.length == 0 || reqBook.author.length == 0 || reqBook.languaje.length == 0 || reqBook.yearPublished.length == 0) {
-            responseData = "bad request"
+        const idBook = req.body.id
+        
+        const idxBook = booksDB.findIndex(x => x.id === idBook);
+        if (idxBook == -1) {
+            responseData = "book not founded"
         }
         else {
-            //const bookFound = booksDB.find((book: Book) => { return book.id == reqBook.id })
-            const idxBook = booksDB.findIndex(x => x.id === reqBook.id);
-            if (idxBook == -1) {
-                responseData = "book not founded"
-            }
-            else {
-                booksDB.splice(idxBook, 1)
-                //booksDB.push(reqBook)
-                responseData = `Book deleted: ${reqBook.id}`
-            }
+            booksDB.splice(idxBook, 1)
+            responseData = `Book deleted: ${idBook}`
         }
+
         res.json(responseData);
         res.status(201)
         res.end()
@@ -125,7 +114,7 @@ export async function insert(req: Request, res: Response): Promise<Response | vo
             languaje: req.body.languaje,
             yearPublished: req.body.yearPublished,
         }
-        if (reqBook.id.length == 0 || reqBook.name.length == 0 || reqBook.author.length == 0 || reqBook.languaje.length == 0 || reqBook.yearPublished.length == 0) {
+        if (reqBook.name.length == 0 || reqBook.author.length == 0 || reqBook.languaje.length == 0 || reqBook.yearPublished.length == 0) {
             responseData = "bad request"
         }
         else {
